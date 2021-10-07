@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'hashicorp/terraform:1.0.8'
+      image 'jenkins-terraform-agent:latest'
     }
   }
   environment {
