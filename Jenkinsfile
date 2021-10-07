@@ -4,6 +4,10 @@ pipeline {
       image 'hashicorp/terraform:1.0.8'
     }
   }
+  environment {
+      AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
+      AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+  }
   stages {
     stage('Init') {
       steps {
